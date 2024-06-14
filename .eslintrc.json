@@ -1,3 +1,35 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:i18next/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true, // Включает поддержку JSX
+      "globalReturn": false, // Запрещает return вне функций
+      "impliedStrict": true // Включает строгий режим
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module" // Поддержка ES6 модулей
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "i18next"
+  ],
+  "rules": {
+    "quotes": ["warn", "single"],
+    "semi": ["error", "always"],
+    "indent": [2, 4],
+    "react/jsx-indent": [2, 4],
+    "react/jsx-indent-props": [2, 4],
+    "no-unused-vars": "warn",
+    "eqeqeq": ["error", "always"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "jsx-quotes": ["warn", "prefer-double"]
+  }
 }
