@@ -1,0 +1,81 @@
+module.exports = {
+    env: {
+        browser: true,
+        node: true,
+        es6: true,
+    },
+    globals: {
+        _IS_DEV_: true,
+    },
+    extends: [
+        'next/core-web-vitals',
+        'eslint:recommended',
+        'airbnb',
+        'plugin:react/recommended',
+        'plugin:i18next/recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:jest/recommended',
+        'plugin:prettier/recommended',
+    ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+            globalReturn: false,
+            impliedStrict: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    plugins: ['react', '@typescript-eslint', 'i18next', 'jest', 'prettier'],
+    rules: {
+        quotes: ['warn', 'single'],
+        semi: ['error', 'always'],
+        indent: [2, 4],
+        'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+        eqeqeq: ['error', 'always'],
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'warn',
+        'react/prop-types': 'off',
+        'jsx-quotes': ['warn', 'prefer-double'],
+        'react/jsx-filename-extension': [2, {
+            extensions:
+                ['.js', '.jsx', '.ts', '.tsx'],
+        }],
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
+        'react/function-component-definition': 'off',
+        'no-shadow': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'warn',
+        'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': ['warn', {
+            markupOnly: true,
+            ignoreAttribute: ['data-testid']
+        }],
+        'max-len': ['warn', 100, { ignoreComments: true }]
+    },
+    overrides: [
+        {
+            files: ['src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
+    settings: {
+        react: {
+            version: 'detect'
+        },
+        'import/resolver': {
+            node: {
+                extensions: ['.js', '.jsx', '.ts', '.tsx']
+            },
+            typescript: {
+                alwaysTryTypes: true
+            }
+        }
+    },
+};
