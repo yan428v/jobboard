@@ -15,7 +15,6 @@ module.exports = {
         'plugin:i18next/recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:jest/recommended',
-        'plugin:prettier/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -27,22 +26,21 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'jest', 'prettier'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'jest'],
     rules: {
         quotes: ['warn', 'single'],
         semi: ['error', 'always'],
-        indent: [2, 4],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
+        indent: ['error', 4],
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
         'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         eqeqeq: ['error', 'always'],
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/prop-types': 'off',
         'jsx-quotes': ['warn', 'prefer-double'],
-        'react/jsx-filename-extension': [2, {
-            extensions:
-                ['.js', '.jsx', '.ts', '.tsx'],
+        'react/jsx-filename-extension': ['error', {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
         }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -53,9 +51,9 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['warn', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid']
+            ignoreAttribute: ['data-testid'],
         }],
-        'max-len': ['warn', 100, { ignoreComments: true }]
+        'max-len': ['warn', 100, { ignoreComments: true }],
     },
     overrides: [
         {
@@ -64,18 +62,22 @@ module.exports = {
                 'i18next/no-literal-string': 'off',
             },
         },
+
     ],
     settings: {
         react: {
-            version: 'detect'
+            version: 'detect',
+        },
+        jest: {
+            version: 'detect',
         },
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx', '.ts', '.tsx']
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
             },
             typescript: {
-                alwaysTryTypes: true
-            }
-        }
+                alwaysTryTypes: true,
+            },
+        },
     },
 };
