@@ -4,6 +4,7 @@ const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
+        console.log(1);
         const {
             name, phoneNumber, city, jobTitle, jobDescription, jobCategory, isVip,
         } = req.body;

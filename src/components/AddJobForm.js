@@ -28,8 +28,9 @@ function AddJobForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formData);
         try {
-            const response = await fetch('src/api/addJobPost', {
+            const response = await fetch('api/addJobPost', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,6 +55,7 @@ function AddJobForm() {
                 onChange={handleChange}
                 placeholder="Name"
                 className={styles.inputField}
+                required
             />
             <input
                 type="text"

@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/addJobPost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/jobPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddJobForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddJobForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/for_commit.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/addJobPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/addJobPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/jobPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/jobPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddJobForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddJobForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +57,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -105,7 +101,8 @@
       <workItem from="1718310751371" duration="2754000" />
       <workItem from="1718367236252" duration="11264000" />
       <workItem from="1718393631885" duration="6451000" />
-      <workItem from="1718649826622" duration="17687000" />
+      <workItem from="1718649826622" duration="27031000" />
+      <workItem from="1718869989790" duration="3794000" />
     </task>
     <servers />
   </component>
