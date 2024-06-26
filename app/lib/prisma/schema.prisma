@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model JobPost {
+model job_post {
   id              Int      @id @default(autoincrement())
   name            String
   phoneNumber     String   @db.VarChar(20)

@@ -1,7 +1,8 @@
-'use client';
-
 import React, { useState } from 'react';
+import { PrismaClient } from '@prisma/client';
 import styles from './AddJobForm.module.css';
+
+const prisma = new PrismaClient();
 
 function AddJobForm() {
     const [formData, setFormData] = useState({
@@ -30,15 +31,15 @@ function AddJobForm() {
         e.preventDefault();
         console.log(formData);
         try {
-            const response = await fetch('api/addJobPost', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-            const data = await response.json();
-            console.log(data);
+            // const response = await fetch('api/jobPosts/addJobPost', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(formData),
+            // });
+            // const data = await response.json();
+            // console.log(data);
             alert('Job posted successfully!');
         } catch (error) {
             console.error('Failed to add job post:', error);
