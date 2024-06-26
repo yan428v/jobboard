@@ -15,6 +15,7 @@ datasource db {
 
 model job_post {
   id              Int      @id @default(autoincrement())
+  // id              String      @id @default(cuid())
   name            String
   phoneNumber     String   @db.VarChar(20)
   whatsappNumber  String?  @db.VarChar(20)
@@ -26,3 +27,4 @@ model job_post {
   isVip           Boolean  @default(false)
   creationDate    DateTime @default(now())
 }
+

@@ -1,5 +1,3 @@
-import AddJobForm from './ui/addJobForm/AddJobForm';
-
 export default function Home() {
     // header
     // фильтры
@@ -7,7 +5,7 @@ export default function Home() {
     // 3 виджета
     return (
         <div>
-            <AddJobForm />
+            <h1>Главная страница</h1>
         </div>
     );
 }

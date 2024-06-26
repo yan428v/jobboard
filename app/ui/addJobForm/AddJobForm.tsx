@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { PrismaClient } from '@prisma/client';
-import styles from './AddJobForm.module.css';
+'use client';
 
-const prisma = new PrismaClient();
-import { test } from './test';
+import React, { useState } from 'react';
+import styles from './AddJobForm.module.css';
+import { createJobPost } from '../../lib/actions';
+
 function AddJobForm() {
     const [formData, setFormData] = useState({
         name: '',
@@ -17,6 +17,8 @@ function AddJobForm() {
         isVip: false,
     });
 
+    const [isLoading, setIsLoading] = useState(false);
+
     const handleChange = (e) => {
         const {
             name, value, type, checked,
@@ -27,29 +29,35 @@ function AddJobForm() {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(formData);
+    const handleSubmit = async () => {
+        setIsLoading(true);
         try {
-            test(formData)
-            // const response = await fetch('api/jobPosts/addJobPost', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(formData),
-            // });
-            // const data = await response.json();
-            // console.log(data);
+            await createJobPost(formData);
+            console.log(formData);
             alert('Job posted successfully!');
+            setFormData({
+                name: '',
+                phoneNumber: '',
+                whatsappNumber: '',
+                telegramNumber: '',
+                city: '',
+                jobTitle: '',
+                jobDescription: '',
+                jobCategory: '',
+                isVip: false,
+            });
         } catch (error) {
             console.error('Failed to add job post:', error);
             alert('Failed to post job.');
         }
+        setIsLoading(false);
     };
 
     return (
-        <form onSubmit={handleSubmit} className={styles.formContainer}>
+        <form
+            action={handleSubmit}
+            className={styles.formContainer}
+        >
             <input
                 type="text"
                 name="name"
