@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 import styles from './AddJobForm.module.css';
 
 const prisma = new PrismaClient();
-
+import { test } from './test';
 function AddJobForm() {
     const [formData, setFormData] = useState({
         name: '',
@@ -31,6 +31,7 @@ function AddJobForm() {
         e.preventDefault();
         console.log(formData);
         try {
+            test(formData)
             // const response = await fetch('api/jobPosts/addJobPost', {
             //     method: 'POST',
             //     headers: {
