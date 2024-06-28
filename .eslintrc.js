@@ -33,7 +33,7 @@ module.exports = {
         indent: ['error', 4],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
-        'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+        'no-unused-vars': ['off', { argsIgnorePattern: '^_', ignoreRestSiblings: true }],
         eqeqeq: ['error', 'always'],
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
@@ -54,6 +54,7 @@ module.exports = {
             ignoreAttribute: ['data-testid'],
         }],
         'max-len': ['warn', 100, { ignoreComments: true }],
+        'space-infix-ops': 'off',
     },
     overrides: [
         {

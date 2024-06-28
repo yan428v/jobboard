@@ -9,7 +9,12 @@ const nextConfig = {
         locales: ['ru-RU'],
         defaultLocale: 'ru-RU',
     },
-    output: 'standalone'
+    output: 'standalone',
+    // images: {
+    //     domains: [], // Сюда можно добавить внешние домены, с которых разрешено загружать изображения
+    //     path: '/_next/image',
+    //     loader: 'default' // Использует стандартный загрузчик Next.js
+    // }
 };
 
 export default nextConfig;

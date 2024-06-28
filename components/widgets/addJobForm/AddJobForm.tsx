@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
-import styles from './AddJobForm.module.css';
-import { createJobPost } from '../../lib/actions';
+import React, { ChangeEvent, useState } from 'react';
+import styles from './AddJobForm.module.scss';
+import { createJobPost } from '../../../lib/api/actions';
+import Loader from '../../shared/Loader/ui/Loader';
 
 function AddJobForm() {
     const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ function AddJobForm() {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {
             name, value, type, checked,
         } = e.target;
@@ -30,11 +31,14 @@ function AddJobForm() {
     };
 
     const handleSubmit = async () => {
-        setIsLoading(true);
         try {
+            setIsLoading(true);
+            // setTimeout(async () => {
+            // }, 2000);
             await createJobPost(formData);
+
             console.log(formData);
-            alert('Job posted successfully!');
+            // alert('Job posted successfully!');
             setFormData({
                 name: '',
                 phoneNumber: '',
@@ -46,11 +50,13 @@ function AddJobForm() {
                 jobCategory: '',
                 isVip: false,
             });
+            console.log('post was created');
         } catch (error) {
             console.error('Failed to add job post:', error);
-            alert('Failed to post job.');
+            // alert('Failed to post job.');
+        } finally {
+            setIsLoading(false);
         }
-        setIsLoading(false);
     };
 
     return (
@@ -131,7 +137,13 @@ function AddJobForm() {
                 />
                 <span className={styles.checkboxLabel}>Is VIP</span>
             </div>
-            <button type="submit" className={styles.submitButton}>Post Job</button>
+            <button
+                type="submit"
+                disabled={isLoading}
+                className={styles.submitButton}
+            >
+                {isLoading ? <Loader />:'Post Job' }
+            </button>
         </form>
     );
 }

@@ -5,16 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/create-post/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shared/Loader/ui/Loader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/shared/Loader/ui/Loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/widgets/Header/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/widgets/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/jobPosts/deleteJobPost.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/api/jobPosts/updateJobPost.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hooks/useTudasuda" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seeds.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/filter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/add-post/loyout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create-post/loyout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/add-post/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/prisma.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create-post/loyout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create-post/loyout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create-post/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create-post/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/api/jobPosts/addJobPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/jobPosts/addJobPost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/api/jobPosts/deleteJobPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/api/jobPosts/jobPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/jobPosts/jobPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/api/jobPosts/updateJobPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/FIlter/Filter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/hooks/useTudasuda" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/FIlter/Filter.module.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/prisma.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/addJobForm/AddJobForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/addJobForm/AddJobForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/addJobForm/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/addJobForm/AddJobForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/addJobForm/AddJobForm.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/addJobForm/AddJobForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/addJobForm/AddJobForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/widgets/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Loader/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for_commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/for_commit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/posts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/posts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,35 +73,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;eslint.code.style.apply.dismiss&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yan/WebstormProjects/jobboard&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build:dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.24950299&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/yan/WebstormProjects/jobboard/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "eslint.code.style.apply.dismiss": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/yan/WebstormProjects/jobboard/prisma",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build:dev.executor": "Run",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Sass/SCSS",
+    "settings.editor.splitter.proportion": "0.24950299",
+    "ts.external.directory.path": "/Users/yan/WebstormProjects/jobboard/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prisma" />
       <recent name="$PROJECT_DIR$/app/ui" />
-      <recent name="$PROJECT_DIR$/app/ui/shared" />
-      <recent name="$PROJECT_DIR$/app/ui/shared/ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/prisma" />
+      <recent name="$PROJECT_DIR$/lib/api" />
+      <recent name="$PROJECT_DIR$/lib/types" />
+      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -128,7 +159,9 @@
       <workItem from="1719306157473" duration="16349000" />
       <workItem from="1719346143251" duration="527000" />
       <workItem from="1719350317348" duration="14718000" />
-      <workItem from="1719408848752" duration="17656000" />
+      <workItem from="1719408848752" duration="27078000" />
+      <workItem from="1719439363972" duration="689000" />
+      <workItem from="1719469532422" duration="53683000" />
     </task>
     <servers />
   </component>

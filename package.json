@@ -7,20 +7,23 @@
     "build:dev": "next build",
     "build:prod": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma-seed": "tsx prisma/seeds.ts"
   },
   "dependencies": {
-    "@prisma/client": "^5.15.1",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tsx": "^4.15.7"
   },
   "devDependencies": {
+    "@prisma/client": "^5.15.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
+    "clsx": "^2.1.1",
     "eslint": "^8",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "14.2.4",
@@ -28,6 +31,7 @@
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-react": "^7.34.2",
     "prisma": "^5.15.1",
+    "sass": "^1.77.6",
     "typescript": "^5"
   }
 }

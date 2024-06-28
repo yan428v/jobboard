@@ -1,4 +1,4 @@
-import { prisma } from '../app/lib/prisma';
+import { prisma } from '../prisma/prisma';
 
 export function getPostById(id: number) {
     return prisma.job_post.findUnique({

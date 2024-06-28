@@ -1,0 +1,47 @@
+:root {
+  --blue-ligth-color: #E5F4FF;
+
+  --border-style: {
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+  }
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //background-color: #ffffff;
+}
+
+// TODO focus
+//:focus {
+//  outline: #000000 auto 1px;
+//}
+
+li {
+  list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  font-weight: 300;
+}

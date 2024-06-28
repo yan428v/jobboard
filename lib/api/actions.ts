@@ -1,8 +1,7 @@
 'use server';
 
-import { JobPostData } from '../../types/types';
-
-import { prisma } from './prisma';
+import { JobPostData } from '../types/types';
+import { prisma } from '../../prisma/prisma';
 
 export async function createJobPost(data: JobPostData) {
     // TODO create validation data func

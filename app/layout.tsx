@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './ui/globals.css';
+import './globals.scss';
 
 export const metadata: Metadata = {
     title: 'Поиск работы в Израиле - Доска вакансий',
