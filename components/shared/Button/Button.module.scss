@@ -1,0 +1,24 @@
+.button {
+  border: 1.5px solid #000000;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &-large { // Специфический модификатор для большого размера
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+
+  &-medium { // Специфический модификатор для среднего размера
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}

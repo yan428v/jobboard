@@ -1,5 +1,5 @@
-import Header from '../components/widgets/Header/Header';
-import Filter from '../components/widgets/FIlter/Filter.module';
+import Filter from '../components/features/FIlter/Filter';
+import PostsList from '../components/widgets/PostsList/PostsList';
 
 export default function Home() {
     // header
@@ -8,10 +8,9 @@ export default function Home() {
     // 3 виджета
     return (
         <div>
-            <Header />
             <Filter />
-            <h1>Главная страница</h1>
-            {/* <Loader /> */}
+            <PostsList />
+
         </div>
     );
 }

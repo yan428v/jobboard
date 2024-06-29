@@ -1,11 +1,11 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
-import styles from './AddJobForm.module.scss';
+import styles from './CreatePost.module.scss';
 import { createJobPost } from '../../../lib/api/actions';
 import Loader from '../../shared/Loader/ui/Loader';
 
-function AddJobForm() {
+function CreatePost() {
     const [formData, setFormData] = useState({
         name: '',
         phoneNumber: '',
@@ -148,4 +148,4 @@ function AddJobForm() {
     );
 }
 
-export default AddJobForm;
+export default CreatePost;

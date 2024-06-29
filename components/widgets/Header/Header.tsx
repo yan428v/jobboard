@@ -4,33 +4,43 @@ import Image from 'next/image';
 import styles from './Header.module.scss';
 
 const Header = () => (
-    <header className={styles.header}>
-        <div>
-            <Link href="/">
-                <Image
-                    src="/logo.svg"
-                    alt="logo"
-                    width={156}
-                    height={44}
-                    priority
-                />
-            </Link>
-        </div>
-        <ul>
-            <li>
-                <Link href="/create-post">Добавить вакансию</Link>
-            </li>
-            <li>
-                <Link href="/">Связь с нами</Link>
-            </li>
-            {/* <li> */}
-            {/*    <Link href="/">Добавить резюме</Link> */}
-            {/* </li> */}
-            {/* <li> */}
-            {/*    <Link href="/">Поддержать проект</Link> */}
-            {/* </li> */}
-        </ul>
-    </header>
+    <div className={styles.headerWrapper}>
+        <header className={styles.header}>
+
+            <div className={styles.logoContainer}>
+                <Link href="/">
+                    <Image
+                        src="/logo.svg"
+                        alt="logo"
+                        width={156}
+                        height={44}
+                        priority
+                        className={styles.logo}
+                    />
+                </Link>
+            </div>
+            <ul className={styles.navList}>
+                <li className={styles.navItem}>
+                    <Link
+                        href="/create-post"
+                        className={styles.navLink}
+                    >
+                        Добавить вакансию
+
+                    </Link>
+                </li>
+                <li className={styles.navItem}>
+                    <Link
+                        href="/"
+                        className={styles.navLink}
+                    >
+                        Связь с нами
+                    </Link>
+                </li>
+            </ul>
+
+        </header>
+    </div>
 );
 
 export default Header;

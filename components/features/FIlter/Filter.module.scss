@@ -1,19 +1,27 @@
+.filterBarWrapper{
+}
+.filterOptionWrapper {
+}
+
 .filterBar {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1316px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 44px;
   border-bottom: 1px solid #ccc;
-  min-width: 1200px;
 }
 
 .filterButton {
   background: #ffffff;
+  padding: 5px 20px;
   border: 1.5px solid #000000;
   border-radius: 5px;
-  padding: 5px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
 
   .filterIcon {
     width: 10px;

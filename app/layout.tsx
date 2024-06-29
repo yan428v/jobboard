@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.scss';
+import Header from '../components/widgets/Header/Header';
 
 export const metadata: Metadata = {
     title: 'Поиск работы в Израиле - Доска вакансий',
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru">
-            <body>{children}</body>
+            <body>
+                <Header />
+                {children}
+            </body>
         </html>
     );
 }

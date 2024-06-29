@@ -1,13 +1,9 @@
 :root {
   --blue-ligth-color: #E5F4FF;
 
-  --border-style: {
-    border: 1.5px solid #000000;
-    border-radius: 5px;
-  }
-
+  //$border-style: 1.5px solid #000000;
+  //$border-radius: 5px;
 }
-
 
 * {
   margin: 0;
@@ -26,7 +22,7 @@ li {
 }
 
 input,
-button,
+//button,
 textarea,
 select {
   margin: 0;

@@ -28,6 +28,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next', 'jest'],
     rules: {
+
         quotes: ['warn', 'single'],
         semi: ['error', 'always'],
         indent: ['error', 4],
@@ -55,6 +56,7 @@ module.exports = {
         }],
         'max-len': ['warn', 100, { ignoreComments: true }],
         'space-infix-ops': 'off',
+        'arrow-body-style': 'off',
     },
     overrides: [
         {
