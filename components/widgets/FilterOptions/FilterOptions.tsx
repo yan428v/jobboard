@@ -1,5 +1,5 @@
 import React from 'react';
-import DataFilter from '../DataFilter/DataFilter';
+import DateFilter from '../DataFilter/DateFilter';
 import CityFilter from '../CityFilter/CityFilter';
 import CategoryFilter from '../CategoryFilter/CategoryFilter';
 import styles from './FilterOptions.module.scss';
@@ -7,12 +7,13 @@ import styles from './FilterOptions.module.scss';
 const FilterOptions = () => {
     return (
         <div className={styles.filterOptions}>
-            <div>
-                <DataFilter />
+            <div className={styles.dateCityFilterContainer}>
+                <DateFilter />
                 <CityFilter />
-
             </div>
-            <CategoryFilter />
+            <div className={styles.categoryFilterContainer}>
+                <CategoryFilter />
+            </div>
 
         </div>
     );

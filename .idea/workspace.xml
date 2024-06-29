@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/features/FIlter/Filter.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/features/FIlter/Filter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/shared/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CreatePost/CreatePost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CreatePost/CreatePost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/DataFilter/DataFilter.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/DataFilter/DataFilter.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/DataFilter/DataFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/DataFilter/DateFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/FilterOptions/FilterOptions.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/FilterOptions/FilterOptions.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/FilterOptions/FilterOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/FilterOptions/FilterOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/PostsList/PostsList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/PostsList/PostsList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +72,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build:dev.executor": "Run",
+    "npm.prisma-seed.executor": "Run",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Sass/SCSS",
     "settings.editor.splitter.proportion": "0.24950299",
     "ts.external.directory.path": "/Users/yan/WebstormProjects/jobboard/node_modules/typescript/lib",
@@ -72,7 +92,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.prisma-seed">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -83,8 +103,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="prisma-seed" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma-seed" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.prisma-seed" />
         <item itemvalue="npm.build:dev" />
       </list>
     </recent_temporary>
@@ -125,7 +156,7 @@
       <workItem from="1719350317348" duration="14718000" />
       <workItem from="1719408848752" duration="27078000" />
       <workItem from="1719439363972" duration="689000" />
-      <workItem from="1719469532422" duration="86810000" />
+      <workItem from="1719469532422" duration="98995000" />
     </task>
     <servers />
   </component>

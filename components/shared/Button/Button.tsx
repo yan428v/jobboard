@@ -3,15 +3,23 @@ import clsx from 'clsx';
 import styles from './Button.module.scss'; // Импорт стилей как модуля
 
 type ButtonProps = {
-    size?: 'large' | 'medium'; // Определение допустимых значений для size
+    size?: 'l' | 'm'; // Определение допустимых значений для size
     className?: string;
     children?: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ size = 'medium', className, children }) => (
+const Button: React.FC<ButtonProps> = ({
+    size = 'm',
+    className,
+    children,
+}) => (
     <button
         type="button"
-        className={clsx(styles.button, styles[`button-${size}`], className)} // Использование модульных классов
+        className={clsx(
+            styles.button,
+            styles[`button-${size}`],
+            className,
+        )}
     >
         {children}
     </button>

@@ -1,8 +1,12 @@
 import React from 'react';
+import Button from '../../shared/Button/Button';
+import styles from './CategoryFilter.module.scss';
 
 const CategoryFilter = () => {
     return (
-        <div />
+        <div className={styles.categoryFilters}>
+            <Button />
+        </div>
     );
 };
 

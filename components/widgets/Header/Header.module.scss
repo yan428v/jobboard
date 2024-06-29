@@ -3,9 +3,8 @@
 }
 
 .header {
-  width: 1316px;
+  width: var(--width-wrapper);
   margin: 0 auto;
-  padding: 0 20px;
   height: 44px;
   display: flex;
   align-items: center;

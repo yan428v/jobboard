@@ -3,9 +3,8 @@
 }
 
 .postsList {
-  width: 1316px;
+  width: var(--width-wrapper);
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
 }
 

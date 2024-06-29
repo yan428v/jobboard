@@ -5,8 +5,10 @@ import { prisma } from '../../prisma/prisma';
 
 export async function createJobPost(data: JobPostData) {
     // TODO create validation data func
+    // не ChooseCategory и не ChooseCity
+
     try {
-        const jobPost = await prisma.job_post.create({
+        return await prisma.job_post.create({
             data: {
                 name: data.name,
                 phoneNumber: data.phoneNumber,
@@ -19,7 +21,6 @@ export async function createJobPost(data: JobPostData) {
                 isVip: data.isVip,
             },
         });
-        return jobPost;
     } catch (error) {
         console.error('Error creating job post:', error);
         throw new Error('Failed to create job post');

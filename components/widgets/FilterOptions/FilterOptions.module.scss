@@ -1,12 +1,21 @@
 .filterOptions {
-
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 1316px;
-  display: flex;
+  margin:  auto;
+  padding: 10px 0px;
+  width: var(--width-wrapper);
+  display: block;
   justify-content: space-between;
   align-items: center;
-  height: 44px;
+  //height: 44px;
   border-bottom: 1px solid #ccc;
   min-width: 1200px;
+}
+
+.dateCityFilterContainer {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+
+}
+.categoryFilterContainer {
+  margin-top: 10px;
+
 }

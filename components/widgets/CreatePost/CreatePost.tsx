@@ -4,29 +4,40 @@ import React, { ChangeEvent, useState } from 'react';
 import styles from './CreatePost.module.scss';
 import { createJobPost } from '../../../lib/api/actions';
 import Loader from '../../shared/Loader/ui/Loader';
+import { City, JobCategory, JobPostData } from '../../../lib/types/types';
 
 function CreatePost() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<JobPostData>({
         name: '',
         phoneNumber: '',
         whatsappNumber: '',
         telegramNumber: '',
-        city: '',
+        city: City.ChooseCity,
         jobTitle: '',
         jobDescription: '',
-        jobCategory: '',
+        jobCategory: JobCategory.ChooseCategory,
         isVip: false,
     });
 
     const [isLoading, setIsLoading] = useState(false);
 
+    // const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    //     const {
+    //         name, value, type, checked,
+    //     } = e.target;
+    //     setFormData((prev) => ({
+    //         ...prev,
+    //         [name]: type === 'checkbox' ? checked : value,
+    //     }));
+    // };
+
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const {
-            name, value, type, checked,
-        } = e.target;
+        const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+        const value = target.type === 'checkbox'
+            ? (target as HTMLInputElement).checked : target.value;
         setFormData((prev) => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value,
+            [target.name]: value,
         }));
     };
 
@@ -44,10 +55,10 @@ function CreatePost() {
                 phoneNumber: '',
                 whatsappNumber: '',
                 telegramNumber: '',
-                city: '',
+                city: City.ChooseCity,
                 jobTitle: '',
                 jobDescription: '',
-                jobCategory: '',
+                jobCategory: JobCategory.ChooseCategory,
                 isVip: false,
             });
             console.log('post was created');
@@ -84,7 +95,7 @@ function CreatePost() {
             <input
                 type="text"
                 name="whatsappNumber"
-                value={formData.whatsappNumber}
+                value={formData.whatsappNumber ?? ''}
                 onChange={handleChange}
                 placeholder="WhatsApp Number"
                 className={styles.inputField}
@@ -92,7 +103,7 @@ function CreatePost() {
             <input
                 type="text"
                 name="telegramNumber"
-                value={formData.telegramNumber}
+                value={formData.telegramNumber ?? ''}
                 onChange={handleChange}
                 placeholder="Telegram Number"
                 className={styles.inputField}

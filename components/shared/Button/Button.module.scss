@@ -9,16 +9,25 @@
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--blue-ligth-color);
+    border: 1px solid var(--blue-ligth-color);
   }
 
-  &-large { // Специфический модификатор для большого размера
-    padding: 12px 24px;
-    font-size: 18px;
+  :active {
+    background-color: #000000;
   }
 
-  &-medium { // Специфический модификатор для среднего размера
-    padding: 8px 16px;
-    font-size: 16px;
+  &-l {
+    width: 296px;
+    height: 40px;
+    //padding: 12px 24px;
+    //font-size: 18px;
+  }
+
+  &-m {
+    width: 144px;
+    height: 35px;
+    //padding: 8px 16px;
+    //font-size: 16px;
   }
 }
