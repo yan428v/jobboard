@@ -1,17 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, {
+    useState,
+} from 'react';
 import Image from 'next/image';
 import styles from './Filter.module.scss';
 import FilterOptions from '../../widgets/FilterOptions/FilterOptions';
 
 const Filter = () => {
     const [isOpen, setIsOpen] = useState(false); // Состояние для управления видимостью
+
     const toggleFilter = () => setIsOpen(!isOpen); // Функция для переключения состояния
 
     return (
+
         <div className={styles.filterBarWrapper}>
             <div className={styles.filterBar}>
+
                 <button onClick={toggleFilter} type="button" className={styles.filterButton}>
                     <p>Показать фильтры (2)</p>
                     {/* Показать фильтры (2) */}
@@ -23,6 +28,7 @@ const Filter = () => {
                         height={16}
                     />
                 </button>
+
                 <div className={styles.searchBar}>
                     <input
                         type="text"
