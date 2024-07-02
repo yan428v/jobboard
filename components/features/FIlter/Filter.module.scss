@@ -6,6 +6,8 @@
 .filterBar {
   margin: 0 auto;
   width: var(--width-wrapper);
+  padding-left: 10px;
+  padding-right: 10px;
   //width: 1316px;
   display: flex;
   justify-content: space-between;

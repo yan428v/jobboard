@@ -3,5 +3,5 @@
 cd /Users/yan/WebstormProjects/jobboard
 
 git add .
-git commit -m "create filter design"
+git commit -m "add categories button. start creating post layout"
 git push

@@ -6,25 +6,27 @@
   background-color: white;
   color: black;
   font-size: 16px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
+  text-align: center;
+
 
   &:hover {
     background-color: var(--blue-ligth-color);
     border: 1px solid var(--blue-ligth-color);
   }
 
-  :active {
-    background-color: #000000;
-  }
+  //&:active {
+  //  background-color: #000000;
+  //}
 
-  &-l {
-    width: 296px;
+  &-l-button {
+    width: 276px;
     height: 40px;
     //padding: 12px 24px;
     //font-size: 18px;
   }
 
-  &-m {
+  &-m-button {
     width: 144px;
     height: 35px;
     //padding: 8px 16px;

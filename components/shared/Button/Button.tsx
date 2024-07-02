@@ -3,13 +3,13 @@ import clsx from 'clsx';
 import styles from './Button.module.scss'; // Импорт стилей как модуля
 
 type ButtonProps = {
-    size?: 'l' | 'm'; // Определение допустимых значений для size
+    size?: 'l-button' | 'm-button'; // Определение допустимых значений для size
     className?: string;
     children?: React.ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = ({
-    size = 'm',
+    size = 'm-button',
     className,
     children,
 }) => (

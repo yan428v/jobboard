@@ -1,0 +1,12 @@
+.postWrapper {
+  //gap: 30px 0;
+  margin: 10px 0;
+}
+
+.postCard {
+  width: var(--width-wrapper);
+  border: 1.5px solid #000000;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
