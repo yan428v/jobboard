@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import dateFilterReducer from './slice';
 
 export const makeStore = () => {
     return configureStore({
