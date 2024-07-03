@@ -15,7 +15,7 @@ function CreatePost() {
         city: City.ChooseCity,
         jobTitle: '',
         jobDescription: '',
-        jobCategory: JobCategory.ChooseCategory,
+        jobCategory: JobCategory.AllCategories,
         isVip: false,
     });
 
@@ -58,7 +58,7 @@ function CreatePost() {
                 city: City.ChooseCity,
                 jobTitle: '',
                 jobDescription: '',
-                jobCategory: JobCategory.ChooseCategory,
+                jobCategory: JobCategory.AllCategories,
                 isVip: false,
             });
             console.log('post was created');

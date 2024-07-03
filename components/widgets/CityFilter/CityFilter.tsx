@@ -6,7 +6,7 @@ const CityFilter = () => {
     return (
         <div className={styles.cityFilter}>
 
-            <Button size="m-button">Все города</Button>
+            <Button>Вся страна</Button>
             <Button>Центр</Button>
             <Button>Север</Button>
             <Button>Юг</Button>

@@ -1,6 +1,6 @@
 export enum City {
     ChooseCity = 'Выбрать город',
-    AllIsrael = 'Весь Израиль',
+    AllCountry = 'Вся страна',
     Center = 'Центр',
     // Города Центрального региона
     TelAviv = 'Тель-Авив',
@@ -71,7 +71,7 @@ export enum City {
 }
 
 export enum JobCategory {
-    ChooseCategory = 'Выбрать категорию',
+    AllCategories = 'Все категории',
     CleaningAndHousekeeping = 'Уборка и помощь по хозяйству',
     ConstructionAndRepair = 'Строительство и ремонт',
     HotelsAndRestaurants = 'Гостиницы и рестораны',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.scss';
 import Header from '../components/widgets/Header/Header';
+import StoreProvider from './StoreProvider';
 
 export const metadata: Metadata = {
     title: 'Поиск работы в Израиле - Доска вакансий',
@@ -15,11 +16,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ru">
-            <body>
-                <Header />
-                {children}
-            </body>
-        </html>
+        <StoreProvider>
+            <html lang="ru">
+                <body>
+                    <Header />
+                    {children}
+                </body>
+            </html>
+        </StoreProvider>
     );
 }

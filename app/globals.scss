@@ -1,17 +1,16 @@
 :root {
-  --blue-ligth-color: #E5F4FF;
-  --width-wrapper: 1268px;
+  --blue-ligth-color: #ffffff;
+  --width-wrapper: 1280px;
 
-
-  //$border-style: 1.5px solid #000000;
-  //$border-radius: 5px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //background-color: #ffffff;
+  //font-size: 20px;
+  //font-weight: 500;
+  //line-height: 30px;
 }
 
 // TODO focus
@@ -42,4 +41,7 @@ h4,
 h5,
 h6, {
   font-weight: 300;
+}
+.homeWrapper {
+  padding: 0 40px;
 }
