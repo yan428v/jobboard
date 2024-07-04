@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/StoreProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/StoreProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/widgets/DataFilter/DateFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/DataFilter/DateFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/widgets/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/Post/Post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hooks/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hooks/useTudasuda" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/redux/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/store.ts" afterDir="false" />
-    </list>
+    <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +139,7 @@
       <workItem from="1719932491951" duration="47239000" />
       <workItem from="1720031300531" duration="12721000" />
       <workItem from="1720085724197" duration="10892000" />
-      <workItem from="1720109657194" duration="7394000" />
+      <workItem from="1720109657194" duration="7705000" />
     </task>
     <servers />
   </component>
