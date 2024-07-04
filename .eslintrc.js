@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next', 'jest'],
     rules: {
-        "linebreak-style": "off",
+        'linebreak-style': 'off',
         quotes: ['warn', 'single'],
         semi: ['error', 'always'],
         indent: ['error', 4],
@@ -54,10 +54,11 @@ module.exports = {
             markupOnly: true,
             ignoreAttribute: ['data-testid'],
         }],
-        'max-len': ['warn', 100, { ignoreComments: true }],
+        'max-len': ['warn', 120, { ignoreComments: true }],
         'space-infix-ops': 'off',
         'arrow-body-style': 'off',
         'react/require-default-props': 'off',
+        'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state'] }],
     },
     overrides: [
         {

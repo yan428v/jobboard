@@ -15,7 +15,6 @@ const Post = () => {
                     <p className={styles.postCategory}>категория 2</p>
                     <p className={styles.postCategory}>категория 3</p>
                 </div>
-
             </div>
         </div>
     );

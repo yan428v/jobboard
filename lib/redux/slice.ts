@@ -1,45 +1,52 @@
-// import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-//
-// interface DateFilterState {
-//     currentDate: string;
-// }
-//
-// const initialState: DateFilterState = {
-//     currentDate: 'week',
-// };
-//
-// const dateFilterSlice = createSlice({
-//     name: 'dateFilter',
-//     initialState,
-//     reducers: {
-//         setDateFilter(state, action: PayloadAction<string>) {
-//             state.currentDate = action.payload;
-//         },
-//     },
-// });
-//
-// export const { setDateFilter } = dateFilterSlice.actions;
-// export default dateFilterSlice.reducer;
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface DateFilterState {
+interface FiltersState {
     currentDate: string;
+    currentCity: string;
+    categories: string[];
 }
 
-const initialState: DateFilterState = {
-    currentDate: 'week', // Установка начального состояния
+const initialState: FiltersState = {
+    currentDate: 'allTime',
+    currentCity: 'allCountry',
+    categories: ['Все категории'],
 };
 
-const dateFilterSlice = createSlice({
+const filtersSlice = createSlice({
     name: 'dateFilter',
     initialState,
     reducers: {
         setDateFilter(state, action: PayloadAction<string>) {
-            state.currentDate = action.payload; // Обновление состояния
+            state.currentDate = action.payload;
+        },
+        setCityFilter(state, action: PayloadAction<string>) {
+            state.currentCity = action.payload;
+        },
+        // Добавление категории в фильтр
+        addCategoryFilter(state, action: PayloadAction<string>) {
+            if (action.payload === 'Все категории') {
+                state.categories = ['Все категории'];
+            } else {
+                state.categories = state.categories.filter((category) => category !== 'Все категории');
+                if (!state.categories.includes(action.payload)) {
+                    state.categories.push(action.payload);
+                }
+            }
+        },
+        // Удаление категории из фильтра
+        removeCategoryFilter(state, action: PayloadAction<string>) {
+            state.categories = state.categories.filter((category) => category !== action.payload);
+            if (state.categories.length === 0) {
+                state.categories = ['Все категории'];
+            }
         },
     },
 });
 
-export const { setDateFilter } = dateFilterSlice.actions;
-export default dateFilterSlice.reducer;
+export const {
+    setDateFilter,
+    setCityFilter,
+    addCategoryFilter,
+    removeCategoryFilter,
+} = filtersSlice.actions;
+export default filtersSlice.reducer;

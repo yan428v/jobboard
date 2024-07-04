@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de069dc2-b9e4-4c05-b96e-625420c2dedc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/StoreProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/StoreProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/shared/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CategoryFilter/CategoryFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/CityFilter/CityFilter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/widgets/DataFilter/DateFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/DataFilter/DateFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_commit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/commit.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/redux/provider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/widgets/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/widgets/Post/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hooks/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hooks/useTudasuda" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/redux/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/slice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/redux/store.ts" afterDir="false" />
     </list>
@@ -60,7 +67,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.build:dev.executor&quot;: &quot;Run&quot;,
     &quot;npm.prisma-seed.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Sass/SCSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.24950299&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/yan/WebstormProjects/jobboard/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -72,11 +79,11 @@
       <recent name="$PROJECT_DIR$/app/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/redux" />
       <recent name="$PROJECT_DIR$/components/widgets/CityFilter" />
       <recent name="$PROJECT_DIR$/components/features" />
       <recent name="$PROJECT_DIR$/components/widgets" />
       <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.prisma-seed">
@@ -145,7 +152,9 @@
       <workItem from="1719439363972" duration="689000" />
       <workItem from="1719469532422" duration="102305000" />
       <workItem from="1719932491951" duration="47239000" />
-      <workItem from="1720031300531" duration="10930000" />
+      <workItem from="1720031300531" duration="12721000" />
+      <workItem from="1720085724197" duration="10892000" />
+      <workItem from="1720109657194" duration="7394000" />
     </task>
     <servers />
   </component>

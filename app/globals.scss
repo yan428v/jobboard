@@ -1,5 +1,5 @@
 :root {
-  --blue-ligth-color: #ffffff;
+  --blue-ligth-color: #448A9B;
   --width-wrapper: 1280px;
 
 }
@@ -30,6 +30,10 @@ select {
   font: inherit;
 }
 
+p{
+  //font-size: 18px;
+}
+
 a {
   text-decoration: none;
 }
@@ -40,7 +44,8 @@ h3,
 h4,
 h5,
 h6, {
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 36px;
 }
 .homeWrapper {
   padding: 0 40px;
