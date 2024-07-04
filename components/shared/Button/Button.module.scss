@@ -14,22 +14,25 @@
     border: 1px solid var(--blue-ligth-color);
   }
 
-  &-l-button {
-    width: 296px;
-    height: 40px;
-    //padding: 12px 24px;
-    //font-size: 18px;
-  }
-
-  &-m-button {
-    width: 187px;
-    height: 40px;
-    //padding: 8px 16px;
-    //font-size: 16px;
-  }
+  //&-l-button {
+  //  width: 296px;
+  //  height: 40px;
+  //
+  //}
+  //
+  //&-m-button {
+  //  width: 187px;
+  //  height: 40px;
+  //
+  //}
   &-selected {  // Новый класс для активного состояния
     background-color: black; // Черный фон для активной кнопки
     color: white; // Белый текст для активной кнопки
     border: 1px solid black; // Черная рамка для активной кнопки
+  }
+  &-button-apply {
+      background-color: green;
+      color: white;
+      border: 1px solid green;
   }
 }

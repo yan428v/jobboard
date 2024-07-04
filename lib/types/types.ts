@@ -90,6 +90,12 @@ export enum JobCategory {
     Other = 'Другое'
 }
 
+export enum FilterButtonState {
+    Open = 'open',
+    Hide = 'hide',
+    Apply = 'apply'
+}
+
 export interface JobPostData {
     name: string;
     phoneNumber: string;

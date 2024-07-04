@@ -16,6 +16,7 @@ const Post = () => {
                     <p className={styles.postCategory}>категория 3</p>
                 </div>
             </div>
+            <div className={styles.separator}></div>
         </div>
     );
 };

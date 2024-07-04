@@ -1,19 +1,22 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {FilterButtonState} from "@/lib/types/types";
 
 interface FiltersState {
     currentDate: string;
     currentCity: string;
     categories: string[];
+    filterButtonState: FilterButtonState
 }
 
 const initialState: FiltersState = {
     currentDate: 'allTime',
     currentCity: 'allCountry',
     categories: ['Все категории'],
+    filterButtonState: FilterButtonState.Hide
 };
 
 const filtersSlice = createSlice({
-    name: 'dateFilter',
+    name: 'filtersSlice',
     initialState,
     reducers: {
         setDateFilter(state, action: PayloadAction<string>) {
@@ -40,6 +43,21 @@ const filtersSlice = createSlice({
                 state.categories = ['Все категории'];
             }
         },
+        setFilterButtonState(state, action: PayloadAction<FilterButtonState>) {
+            if (initialState.currentDate !== 'allTime'
+                || initialState.currentCity !== 'allCountry'
+                || initialState.categories[0] !== 'Все категории') {
+                state.filterButtonState = FilterButtonState.Apply
+            }
+            state.filterButtonState = action.payload
+        }
+
+
+
+
+
+
+
     },
 });
 
@@ -48,5 +66,6 @@ export const {
     setCityFilter,
     addCategoryFilter,
     removeCategoryFilter,
+    setFilterButtonState
 } = filtersSlice.actions;
 export default filtersSlice.reducer;
