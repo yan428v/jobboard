@@ -1,5 +1,5 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {FilterButtonState} from "@/lib/types/types";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { FilterButtonState } from '@/lib/types/types';
 
 interface FiltersState {
     currentDate: string;
@@ -12,7 +12,8 @@ const initialState: FiltersState = {
     currentDate: 'allTime',
     currentCity: 'allCountry',
     categories: ['Все категории'],
-    filterButtonState: FilterButtonState.Hide
+    filterButtonState: FilterButtonState.Hide,
+
 };
 
 const filtersSlice = createSlice({
@@ -21,9 +22,11 @@ const filtersSlice = createSlice({
     reducers: {
         setDateFilter(state, action: PayloadAction<string>) {
             state.currentDate = action.payload;
+            state.filterButtonState = FilterButtonState.Apply;
         },
         setCityFilter(state, action: PayloadAction<string>) {
             state.currentCity = action.payload;
+            state.filterButtonState = FilterButtonState.Apply;
         },
         // Добавление категории в фильтр
         addCategoryFilter(state, action: PayloadAction<string>) {
@@ -34,6 +37,7 @@ const filtersSlice = createSlice({
                 if (!state.categories.includes(action.payload)) {
                     state.categories.push(action.payload);
                 }
+                state.filterButtonState = FilterButtonState.Apply;
             }
         },
         // Удаление категории из фильтра
@@ -42,21 +46,22 @@ const filtersSlice = createSlice({
             if (state.categories.length === 0) {
                 state.categories = ['Все категории'];
             }
+            state.filterButtonState = FilterButtonState.Apply;
         },
         setFilterButtonState(state, action: PayloadAction<FilterButtonState>) {
             if (initialState.currentDate !== 'allTime'
-                || initialState.currentCity !== 'allCountry'
-                || initialState.categories[0] !== 'Все категории') {
-                state.filterButtonState = FilterButtonState.Apply
+        || initialState.currentCity !== 'allCountry'
+        || initialState.categories[0] !== 'Все категории') {
+                state.filterButtonState = FilterButtonState.Apply;
             }
-            state.filterButtonState = action.payload
-        }
-
-
-
-
-
-
+            state.filterButtonState = action.payload;
+        },
+        resetFilters(state) {
+            state.currentDate = 'allTime';
+            state.currentCity = 'allCountry';
+            state.categories = ['Все категории'];
+            state.filterButtonState = FilterButtonState.Apply;
+        },
 
     },
 });
@@ -66,6 +71,7 @@ export const {
     setCityFilter,
     addCategoryFilter,
     removeCategoryFilter,
-    setFilterButtonState
+    setFilterButtonState,
+    resetFilters,
 } = filtersSlice.actions;
 export default filtersSlice.reducer;

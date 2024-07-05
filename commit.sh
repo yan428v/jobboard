@@ -3,5 +3,5 @@
 cd /Users/yan/WebstormProjects/jobboard
 
 git add .
-git commit -m "start to create filterButtonState "
+git commit -m "add remove filter button. add data from db to posts "
 git push

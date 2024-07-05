@@ -1,13 +1,15 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+import { createJobPost } from '@/lib/api/actions';
+import {
+    City, JobCategory, JobPostCreateData,
+} from '@/lib/types/types';
 import styles from './CreatePost.module.scss';
-import { createJobPost } from '../../../lib/api/actions';
 import Loader from '../../shared/Loader/ui/Loader';
-import { City, JobCategory, JobPostData } from '../../../lib/types/types';
 
 function CreatePost() {
-    const [formData, setFormData] = useState<JobPostData>({
+    const [formData, setFormData] = useState<JobPostCreateData>({
         name: '',
         phoneNumber: '',
         whatsappNumber: '',

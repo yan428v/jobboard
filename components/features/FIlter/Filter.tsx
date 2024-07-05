@@ -4,15 +4,21 @@ import Image from 'next/image';
 import Button from '@/components/shared/Button/Button';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import { FilterButtonState } from '@/lib/types/types';
-import { setFilterButtonState } from '@/lib/redux/slice';
+import filtersReducer, { resetFilters, setFilterButtonState } from '@/lib/redux/slice';
+import { configureStore } from '@reduxjs/toolkit';
 import FilterOptions from '../../widgets/FilterOptions/FilterOptions';
 import styles from './Filter.module.scss';
 
 const Filter = () => {
-    // const [isOpen, setIsOpen] = useState(false);
     const filterButtonState = useAppSelector((state) => state.filters.filterButtonState);
     const dispatch = useAppDispatch();
+    const resetFilter = () => {
+        dispatch(resetFilters());
+    };
     const toggleFilterButton = () => {
+        if (filterButtonState === FilterButtonState.Apply) {
+            console.log('Apply');
+        }
         if (filterButtonState === FilterButtonState.Hide) {
             dispatch(setFilterButtonState(FilterButtonState.Open));
             console.log('Open');
@@ -20,22 +26,23 @@ const Filter = () => {
             dispatch(setFilterButtonState(FilterButtonState.Hide));
             console.log('Hide');
         }
-        if (filterButtonState === FilterButtonState.Apply) {
-            console.log('Apply');
-        }
     };
-
     return (
         <div className={styles.filterBarWrapper}>
             <div className={styles.filterBar}>
                 <Button
-                    // isSelected={filterButtonState === FilterButtonState.Open}
-                    isApply
                     onClick={toggleFilterButton}
                     className={styles.filterButton}
+                    filterState={filterButtonState}
                 >
+                    {
+                        filterButtonState === FilterButtonState.Apply
+                            ? <p>Применить фильтры </p>
+                            : filterButtonState === FilterButtonState.Open
+                                ? <p>Скрыть фиьтры</p>
+                                :<p>Показать фильтры (2)</p>
 
-                    <p>Показать фильтры (2)</p>
+                    }
                     <Image
                         className={styles.filterIcon}
                         src="/filter.svg"
@@ -44,6 +51,11 @@ const Filter = () => {
                         height={16}
                     />
                 </Button>
+
+                {
+
+                }
+                <Button onClick={resetFilter}>Сбросить фильтры</Button>
 
                 <div className={styles.searchBar}>
                     <input
@@ -66,8 +78,9 @@ const Filter = () => {
                 </div>
             </div>
             <div className={styles.filterOptionWrapper}>
-                {/* <div className={`${styles.filterOptionWrapper} ${isOpen ? 'open' : ''}`}> */}
-                {filterButtonState === FilterButtonState.Open && <FilterOptions />}
+                {(filterButtonState === FilterButtonState.Open|| filterButtonState === FilterButtonState.Apply)
+                    ? <FilterOptions />
+                    : null}
             </div>
         </div>
 

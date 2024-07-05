@@ -1,9 +1,7 @@
-'use client';
-
+import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
+import { setDateFilter } from '@/lib/redux/slice';
 import Button from '../../shared/Button/Button';
 import styles from './DataFilter.module.scss';
-import { useAppSelector, useAppDispatch } from '../../../lib/redux/hooks';
-import { setDateFilter } from '../../../lib/redux/slice';
 
 const DateFilter = () => {
     const selectedDate = useAppSelector((state) => state.filters.currentDate);

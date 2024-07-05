@@ -14,25 +14,20 @@
     border: 1px solid var(--blue-ligth-color);
   }
 
-  //&-l-button {
-  //  width: 296px;
-  //  height: 40px;
-  //
-  //}
-  //
-  //&-m-button {
-  //  width: 187px;
-  //  height: 40px;
-  //
-  //}
   &-selected {  // Новый класс для активного состояния
     background-color: black; // Черный фон для активной кнопки
     color: white; // Белый текст для активной кнопки
     border: 1px solid black; // Черная рамка для активной кнопки
   }
-  &-button-apply {
+  &-apply {
       background-color: green;
-      color: white;
+      color: #ffffff;
       border: 1px solid green;
   }
+  &-open {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  }
+
 }

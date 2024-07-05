@@ -3,30 +3,33 @@ import clsx from 'clsx';
 import styles from './Button.module.scss'; // Импорт стилей как модуля
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    // size?: 'l-button' | 'm-button'; // Определение допустимых значений для size
     className?: string;
     children?: React.ReactNode;
     isSelected?: boolean;
     onClick?: ()=>void;
-    isApply?:boolean
+    filterState?:string
 };
 
 const Button: React.FC<ButtonProps> = ({
-    // size = 'm-button',
     className,
     children,
     isSelected,
-    onClick, isApply
+    onClick,
+    filterState,
+
 }) => (
     <button
         onClick={onClick}
         type="button"
         className={clsx(
             styles.button,
-            // styles[`button-${size}`],
             className,
             { [styles['button-selected']]: isSelected },
-            { [styles['button-apply']]: isApply },
+            {
+                [styles['button-apply']]: filterState === 'apply',
+                [styles['button-open']]: filterState === 'open',
+                [styles['']]: filterState === 'hide',
+            },
         )}
     >
         {children}

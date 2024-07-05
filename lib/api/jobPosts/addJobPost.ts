@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { JobPostCreateData } from '@/lib/types/types';
 
 const prisma = new PrismaClient();
 
@@ -12,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try {
             console.log(2);
             console.log(req.body);
-            const newJob = await prisma.job_post.create({
+            const newJob:JobPostCreateData = await prisma.job_post.create({
                 data: {
                     name,
                     phoneNumber,

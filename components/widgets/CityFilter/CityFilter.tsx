@@ -1,8 +1,8 @@
 import React from 'react';
+import { setCityFilter } from '@/lib/redux/slice';
+import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import Button from '../../shared/Button/Button';
 import styles from './CityFilter.module.scss';
-import { setCityFilter } from '../../../lib/redux/slice';
-import { useAppDispatch, useAppSelector } from '../../../lib/redux/hooks';
 
 const CityFilter = () => {
     const selectedCity = useAppSelector((state) => state.filters.currentCity);

@@ -1,22 +1,42 @@
 import React from 'react';
+import { JobPostData } from '@/lib/types/types';
 import styles from './Post.module.scss';
 
-const Post = () => {
+interface PostProps {
+    post: JobPostData;
+}
+const Post = ({ post }:PostProps) => {
+    console.log('==========================');
+    console.log(post);
+    console.log(post.creationDate);
+
+    // Преобразуем ISO строку в объект Date
+    const date = new Date(post.creationDate);
+
+    const formattedDate = date.toLocaleString('en-EN', { // ru-RU
+        // year: 'numeric',
+        month: '2-digit',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        // second: 'numeric',
+    });
+
     return (
         <div className={styles.postWrapper}>
             <div className={styles.postCard}>
-                <h2 className={styles.postTitle}>Заголовок</h2>
-                <p className={styles.postDiscription}>
-                    рочно требуются работницы/ки в центре страны. Трудоустройство напрямую от работодателя, не «коах адам». На благоустроенный завод электроники в Модиине - паяльщица. Оператор станка. Работник/работница на склад. Подвозка из Ришон ле Циона, Петах Тиквы. Рамле, Лода. Высокая зарплата. На завод в Од а-Шароне - покрасчик металла или дерева. Высокая зарплата. Подвозка из Петах Тиквы. В кондитерскую в Холоне и Ришон ле Ционе - работник / работница. Высокая зарплата. Есть возможность работы только во вторую смену. На завод в Явне - слесарь сварщик аргон. Очень высокая зарплата подходящему. На завод в Ришон ле Ционе – работники/цы на сборку. На склад в Азуре - водитель до 12 тонн. Работник на склад. Хорошие условия. Высокая зарплата. На завод в Петах Тикве - работник с тех. навыками. В типографию в Холоне - работница на проверку и упаковку этикеток. Работа сидя, кондиционер в цеху. Работник на пластиковый завод в Ришон ле
-                </p>
+                <h2 className={styles.postTitle}>{post.jobTitle}</h2>
+                <p className={styles.postDiscription}>{post.jobDescription}</p>
                 {/* TODO category.map те что активны */}
                 <div className={styles.postCategories}>
-                    <p className={styles.postCategory}>категория 1</p>
-                    <p className={styles.postCategory}>категория 2</p>
-                    <p className={styles.postCategory}>категория 3</p>
+                    <p className={styles.postCategory}>{post.jobCategory}</p>
                 </div>
+                <div className={styles.phoneNumber}>{post.phoneNumber}</div>
+                <div className={styles.telegramNumber}>{post.telegramNumber}</div>
+                <div className={styles.whatsappNumber}>{post.whatsappNumber}</div>
+                <div>{formattedDate}</div>
             </div>
-            <div className={styles.separator}></div>
+            <div className={styles.separator} />
         </div>
     );
 };

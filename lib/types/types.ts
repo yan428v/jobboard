@@ -97,13 +97,26 @@ export enum FilterButtonState {
 }
 
 export interface JobPostData {
+    id: number;
     name: string;
     phoneNumber: string;
     whatsappNumber?: string | null;
     telegramNumber?: string | null;
-    city: City;
+    city: string;
     jobTitle: string;
     jobDescription: string;
-    jobCategory: JobCategory;
+    jobCategory: string;
+    isVip: boolean;
+    creationDate:string
+}
+export interface JobPostCreateData {
+    name: string;
+    phoneNumber: string;
+    whatsappNumber?: string | null;
+    telegramNumber?: string | null;
+    city: string;
+    jobTitle: string;
+    jobDescription: string;
+    jobCategory: string;
     isVip: boolean;
 }
