@@ -24,6 +24,7 @@ const Post = ({ post }:PostProps) => {
 
     return (
         <div className={styles.postWrapper}>
+            <div className={styles.postHeader}>0</div>
             <div className={styles.postCard}>
                 <h2 className={styles.postTitle}>{post.jobTitle}</h2>
                 <p className={styles.postDiscription}>{post.jobDescription}</p>

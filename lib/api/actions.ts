@@ -1,9 +1,9 @@
 'use server';
 
-import { JobPostData } from '../types/types';
+import { JobPostCreateData } from '../types/types';
 import { prisma } from '../../prisma/prisma';
 
-export async function createJobPost(data: JobPostData) {
+export async function createJobPost(data: JobPostCreateData) {
     // TODO create validation data func
     // не ChooseCategory и не ChooseCity
 

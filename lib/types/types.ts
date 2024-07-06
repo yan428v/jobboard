@@ -107,7 +107,7 @@ export interface JobPostData {
     jobDescription: string;
     jobCategory: string;
     isVip: boolean;
-    creationDate:string
+    creationDate: Date
 }
 export interface JobPostCreateData {
     name: string;

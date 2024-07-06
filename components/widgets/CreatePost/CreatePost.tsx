@@ -46,8 +46,7 @@ function CreatePost() {
     const handleSubmit = async () => {
         try {
             setIsLoading(true);
-            // setTimeout(async () => {
-            // }, 2000);
+
             await createJobPost(formData);
 
             console.log(formData);
