@@ -4,9 +4,11 @@ import './globals.scss';
 
 export default function Home() {
     return (
-        <div className="homeWrapper">
+        <div className="wrapperStyles">
             <Filter />
-            <PostsList />
+            <div className="homeWrapper">
+                <PostsList />
+            </div>
         </div>
     );
 }

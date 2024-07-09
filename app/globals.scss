@@ -47,6 +47,15 @@ h6, {
   font-weight: 400;
   font-size: 36px;
 }
+body {
+  background-color: #d5ebf6;
+}
+.wrapperStyles {
+
+}
 .homeWrapper {
   padding: 0 40px;
+  margin: 0 auto;
+  //background-color: #b6ddea;
+  width: var(--width-wrapper);
 }

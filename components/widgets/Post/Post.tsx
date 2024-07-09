@@ -24,8 +24,8 @@ const Post = ({ post }:PostProps) => {
 
     return (
         <div className={styles.postWrapper}>
-            <div className={styles.postHeader}>0</div>
             <div className={styles.postCard}>
+                <div className={styles.postHeader}>0</div>
                 <h2 className={styles.postTitle}>{post.jobTitle}</h2>
                 <p className={styles.postDiscription}>{post.jobDescription}</p>
                 {/* TODO category.map те что активны */}
@@ -37,7 +37,7 @@ const Post = ({ post }:PostProps) => {
                 <div className={styles.whatsappNumber}>{post.whatsappNumber}</div>
                 <div>{formattedDate}</div>
             </div>
-            <div className={styles.separator} />
+            {/* <div className={styles.separator} /> */}
         </div>
     );
 };

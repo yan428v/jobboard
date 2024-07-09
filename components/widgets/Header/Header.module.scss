@@ -1,10 +1,11 @@
 .headerWrapper {
-  background-color: black;
-  padding: 0 40px;
+  //background-color: black;
+  background: linear-gradient(to right, #205a75, #432360);
 }
 
 .header {
   width: var(--width-wrapper);
+  padding: 0 40px;
   margin: 0 auto;
   height: 44px;
   display: flex;
