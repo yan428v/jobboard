@@ -7,7 +7,7 @@
   width: var(--width-wrapper);
   padding: 0 40px;
   margin: 0 auto;
-  height: 44px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,9 +17,11 @@
 .logoContainer {
   display: flex;
   align-items: center;
+
 }
 
 .logo {
+
   // Стили для изображения логотипа
 }
 
@@ -37,8 +39,10 @@
 .navLink {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  //font-size: 16px;
   transition: color 0.3s ease;
+  font-size: 20px;
+
 
   &:hover {
     color: #aaa;

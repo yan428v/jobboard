@@ -1,21 +1,89 @@
+
 .postWrapper {
-  //gap: 30px 0;
+
+}
+.postCard{
+}
+.postHeader{
+  background: linear-gradient(to right, #103140, #432360);
+  display: flex;
+  height: 46px;
+  justify-content: space-between;
+  //width: auto;
+  padding: 0 70px;
+  align-items: center;
+}
+.postCategories{
+display: flex;
+  color: white;
+  align-items: center;
+  gap: 20px;
+}
+.postCategory{
+font-size: 20px;
+}
+.postSeparator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+
+}
+.postDate{
+  font-size: 20px;
+  color: white;
+
+}
+.postContentWrapper {
+  padding: 10px 70px;
+
+}
+.postTileWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+}
+.postTitle{
+  font-size: 42px;
+  margin-left: 30px;
+}
+.postCity{
+font-size: 24px;
+}
+.postDescription {
+  font-size: 20px;
+}
+.postContacts{
+  display: flex;
+  justify-content: center;
   margin: 10px 0;
+  gap: 30px;
 }
-.separator {
- height: 1.5px;
-  background-color: #565656;
+.postWhatsapp{
+  align-items: center;
+  display: flex;
+  background-color: #61D22D;
+
 }
-.postCard {
-  //width: var(--width-wrapper);
-  border: 1.5px solid #000000;
-  border-radius: 5px;
-  //padding: 20px 40px;
+.postTelegram{
+  align-items: center;
+  display: flex;
+  background-color: #24A1DE;
+  //background-color: rgba(36, 161, 222, 1);
+  //backdrop-filter: blur(10px);
+
+}
+.postNumber{
+  align-items: center;
+  display: flex;
+  background-color: #FBFF30;
+
 }
 
-.postHeader {
-  //background-color: #000000;
-  background: linear-gradient(to right, #103140, #432360);
-  width: 100%;
-  height: 40px;
-}
+
+
+
+
+
+

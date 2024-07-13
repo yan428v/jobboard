@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
-import { createJobPost } from '@/lib/api/actions';
+import { createJobPost } from '@/lib/api/actionsJobPosts';
 import {
     City, JobCategory, JobPostCreateData,
 } from '@/lib/types/types';

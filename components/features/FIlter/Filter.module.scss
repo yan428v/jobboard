@@ -20,7 +20,7 @@
   height: 66px;
   background-color: #d5ebf6;
   //border-bottom: 1px solid #ccc;
-  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1.5px 0px 0px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -68,11 +68,15 @@
 
   .searchButton {
     height: 40px;
-    width: 45px;
-    background: #000000;
+    //width: 45px;
+    background: #382463;
     color: white;
     cursor: pointer;
-    border-radius: 0px 5px 5px 0px;
+    //border-top: 1px solid black;
+    //border-right: 1px solid black;
+    //border-bottom: 1px solid black;
+     border-radius: 0px 5px 5px 0px;
+
 
     .searchIcon {
       width: 20px;
