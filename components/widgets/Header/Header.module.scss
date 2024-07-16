@@ -1,6 +1,6 @@
 .headerWrapper {
-  //background-color: black;
-  background: linear-gradient(to right, #205a75, #432360);
+  background-color: black;
+  //background: linear-gradient(to right, #205a75, #432360);
 }
 
 .header {
@@ -26,6 +26,7 @@
 }
 
 .navList {
+  color: #ffffff;
   list-style: none;
   display: flex;
   margin: 0;
@@ -37,7 +38,7 @@
 }
 
 .navLink {
-  color: white;
+  //color: #ffffff;
   text-decoration: none;
   //font-size: 16px;
   transition: color 0.3s ease;

@@ -20,22 +20,20 @@ const Post = ({ post }:PostProps) => {
         month: '2-digit',
         day: '2-digit',
     });
-
     return (
         <div className={styles.postWrapper}>
             <div className={styles.postCard}>
                 <div className={styles.postHeader}>
                     <div className={styles.postCategories}>
-                        <p className={styles.postCategory}>Торговля и розничные продажи</p>
+                        <p className={styles.postCategory}>{post.jobCategory}</p>
                         <div className={styles.postSeparator} />
-                        <p className={styles.postCategory}>Строительство</p>
+                        <p className={styles.postCategory}>{post.jobCategory}</p>
                         <div className={styles.postSeparator} />
-                        <p className={styles.postCategory}>Образование и репетиторство</p>
+                        <p className={styles.postCategory}>{post.jobCategory}</p>
                     </div>
                     <div className={styles.postDate}>{formattedDate}</div>
                 </div>
                 <div className={styles.postContentWrapper}>
-
                     <div className={styles.postTileWrapper}>
                         <h2 className={styles.postTitle}>{post.jobTitle}</h2>
                         <p className={styles.postCity}>{post.city}</p>

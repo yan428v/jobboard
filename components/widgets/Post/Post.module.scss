@@ -3,12 +3,13 @@
 
 }
 .postCard{
-  border: 1.5px solid #000000;
+  border: 1px solid #000000;
   border-radius: 0 0 5px 5px;
   margin-bottom: 10px;
 }
 .postHeader{
-  background: linear-gradient(to right, #103140, #432360);
+  //background: linear-gradient(to right, #103140, #432360); // цвет
+  background: black;
   display: flex;
   height: 46px;
   justify-content: space-between;
@@ -63,29 +64,82 @@ font-size: 24px;
   margin: 10px 0;
   gap: 30px;
 }
+//.postTelegram{
+//  padding: 2px 5px;
+//  border-radius: 5px;
+//  align-items: center;
+//  display: flex;
+//  background-color: #24A1DE;
+//  filter: blur(1px);
+//  //background-color: rgba(36, 161, 222, 1);
+//  //backdrop-filter: blur(10px);
+//}
+
+
 .postWhatsapp{
+  position: relative;
   align-items: center;
   display: flex;
-  background-color: #61D22D;
-
+  padding: 5px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
 }
-.postTelegram{
+.postWhatsapp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:  rgba(97, 210, 45, 1);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.postTelegram {
+  position: relative;
   align-items: center;
   display: flex;
-  background-color: #24A1DE;
-  //background-color: rgba(36, 161, 222, 1);
-  //backdrop-filter: blur(10px);
+  padding: 5px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+   }
 
+.postTelegram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(36, 161, 222, 1);
+  filter: blur(10px);
+  z-index: -1;
 }
+
 .postNumber{
+  position: relative;
   align-items: center;
   display: flex;
-  background-color: #FBFF30;
+  padding: 5px 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
 
 }
-
-
-
+.postNumber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:  rgba(251, 255, 48, 1);
+  filter: blur(10px);
+  z-index: -1;
+}
 
 
 
