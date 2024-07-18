@@ -2,6 +2,8 @@ FROM node:20-alpine3.18
 
 WORKDIR /app
 COPY package*.json ./
+RUN npx prisma generate
+
 RUN npm install
 #RUN npm install
 COPY . .
