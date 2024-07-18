@@ -4,7 +4,7 @@ import { City, JobCategory } from '@/lib/types/types';
 const prisma = new PrismaClient();
 
 const initialPosts = [
-    ...Array(100).fill(null).map((_, index) => ({
+    ...Array(10).fill(null).map((_, index) => ({
         name: `Employer ${index + 1}`,
         phoneNumber: `+972-50-000-${String(index + 1000).padStart(4, '0')}`,
         whatsappNumber: index % 2 === 0
