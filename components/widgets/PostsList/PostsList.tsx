@@ -1,6 +1,7 @@
 import { prisma } from '@/prisma/prisma';
-import styles from './PostsList.module.scss';
+import { JobPostData } from '@/lib/types/types';
 import Post from '../Post/Post';
+import styles from './PostsList.module.scss';
 
 const PostsList = async () => {
     const jobPosts = await prisma.job_post.findMany();
@@ -9,7 +10,7 @@ const PostsList = async () => {
     console.log(tenPosts);
     return (
         <div className={styles.postsList}>
-            {tenPosts.map((post) => <Post key={post.id} post={post} />)}
+            {tenPosts.map((post: JobPostData) => <Post key={post.id} post={post} />)}
         </div>
     );
 };
