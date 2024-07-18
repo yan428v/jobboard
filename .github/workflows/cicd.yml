@@ -1,0 +1,33 @@
+name: Deploy jobboard
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - name: Create .env file
+        run:  |
+          echo "DATABASE_URL=postgresql://${{ secrets.PG_USER }}:${{ secrets.PG_PASSWORD }}@${{ secrets.PG_HOST }}:5432/${{ secrets.PG_DB_NAME }}?schema=public" >> .env
+      - name: Build docker image
+        run: docker build -t yan428/jobboard-box .
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Publish image to docker hub
+        run: docker push yan428/jobboard-box:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull yan428/jobboard-box:latest
+      - name: Delete old container
+        run: docker rm -f jobboard-app-container
+      - name: Run docker container
+        run: docker run -d -p 3000:3000 --name jobboard-app-container yan428/jobboard-box
