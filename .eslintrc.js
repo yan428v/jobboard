@@ -50,10 +50,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['warn', {
-            markupOnly: true,
-            ignoreAttribute: ['data-testid'],
-        }],
+        'i18next/no-literal-string': ['off'],
         'max-len': ['warn', 120, { ignoreComments: true }],
         'space-infix-ops': 'off',
         'arrow-body-style': 'off',

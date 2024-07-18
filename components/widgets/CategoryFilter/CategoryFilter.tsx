@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './CategoryFilter.module.scss';
 import { JobCategory } from '@/lib/types/types';
-import Button from '../../shared/Button/Button';
 import { addCategoryFilter, removeCategoryFilter } from '@/lib/redux/slice';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
+import styles from './CategoryFilter.module.scss';
+import Button from '../../shared/Button/Button';
 
 const CategoryFilter = () => {
     const categoryArray = Object.values(JobCategory);
@@ -23,7 +23,6 @@ const CategoryFilter = () => {
         <div className={styles.categoryFilters}>
             {categoryArray.map((category) => (
                 <Button
-
                     key={category}
                     isSelected={selectedCategories.includes(category)}
                     onClick={() => handleCategoryChange(category)}

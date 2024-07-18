@@ -8,9 +8,9 @@ interface PostProps {
     post: JobPostData;
 }
 const Post = ({ post }:PostProps) => {
-    console.log('==========================');
-    console.log(post);
-    console.log(post.creationDate);
+    // console.log('==========================');
+    // console.log(post);
+    // console.log(post.creationDate);
 
     // Преобразуем ISO строку в объект Date
     const date = new Date(post.creationDate);
