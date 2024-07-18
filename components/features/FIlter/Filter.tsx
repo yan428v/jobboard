@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Button from '@/components/shared/Button/Button';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import { FilterButtonState } from '@/lib/types/types';
-import filtersReducer, { resetFilters, setFilterButtonState } from '@/lib/redux/slice';
-import { configureStore } from '@reduxjs/toolkit';
+import { resetFilters, setFilterButtonState } from '@/lib/redux/slice';
 import FilterOptions from '../../widgets/FilterOptions/FilterOptions';
 import styles from './Filter.module.scss';
 
