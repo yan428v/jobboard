@@ -26,3 +26,15 @@ export async function createJobPost(data: JobPostCreateData) {
         throw new Error('Failed to create job post');
     }
 }
+
+export async function getPostById(id: number) {
+    return prisma.job_post.findUnique({
+        where: {
+            id,
+        },
+    });
+}
+
+export async function getAllPosts() {
+    return prisma.job_post.findMany();
+}

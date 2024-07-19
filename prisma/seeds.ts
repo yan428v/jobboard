@@ -20,9 +20,8 @@ const initialPosts = [
     })),
 ];
 
-const seed = async () => {
+const seeds = async () => {
     await prisma.job_post.deleteMany();
-
     for (const post of initialPosts) {
         await prisma.job_post.create({
             data: post,
@@ -30,4 +29,4 @@ const seed = async () => {
     }
 };
 
-seed();
+seeds();
