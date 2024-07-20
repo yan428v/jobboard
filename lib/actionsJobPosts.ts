@@ -1,11 +1,14 @@
 'use server';
 
+import { unstable_noStore as noStore } from 'next/cache';
+
 import { prisma } from '@/prisma/prisma';
-import { JobPostCreateData } from '../types/types';
+import { JobPostCreateData } from './types/types';
 
 export async function createJobPost(data: JobPostCreateData) {
     // TODO create validation data func
     // не ChooseCategory и не ChooseCity
+    noStore();
 
     try {
         return await prisma.job_post.create({
@@ -28,6 +31,7 @@ export async function createJobPost(data: JobPostCreateData) {
 }
 
 export async function getPostById(id: number) {
+    noStore();
     return prisma.job_post.findUnique({
         where: {
             id,
@@ -36,5 +40,11 @@ export async function getPostById(id: number) {
 }
 
 export async function getAllPosts() {
-    return prisma.job_post.findMany();
+    noStore();
+    try {
+        return await prisma.job_post.findMany();
+    } catch (error) {
+        console.error('Error retrieving job posts:', error);
+        throw new Error('Failed to retrieve job posts');
+    }
 }

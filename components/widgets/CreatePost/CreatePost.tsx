@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
-import { createJobPost } from '@/lib/api/actionsJobPosts';
+import { createJobPost } from '@/lib/actionsJobPosts';
 import {
     City, JobCategory, JobPostCreateData,
 } from '@/lib/types/types';
@@ -50,7 +50,7 @@ function CreatePost() {
             await createJobPost(formData);
 
             console.log(formData);
-            // alert('Job posted successfully!');
+
             setFormData({
                 name: '',
                 phoneNumber: '',
@@ -62,6 +62,7 @@ function CreatePost() {
                 jobCategory: JobCategory.AllCategories,
                 isVip: false,
             });
+
             console.log('post was created');
         } catch (error) {
             console.error('Failed to add job post:', error);
