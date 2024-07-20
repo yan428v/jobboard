@@ -5,14 +5,15 @@ import './globals.scss';
 
 export default async function Home() {
     const jobPosts = await getAllPosts();
-    const tenPosts = jobPosts.slice(0, 10);
-    console.log(tenPosts);
+    // const tenPosts = jobPosts.slice(0, 10);
+    const reversPosts = jobPosts.reverse();
+    // console.log(tenPosts);
 
     return (
         <div className="wrapperStyles">
             <Filter />
             <div className="homeWrapper">
-                <PostsList tenPosts={tenPosts} />
+                <PostsList tenPosts={reversPosts} />
             </div>
         </div>
     );
