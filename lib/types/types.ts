@@ -1,7 +1,9 @@
-export enum City {
+export enum Cities {
     ChooseCity = 'Выбрать город',
     AllCountry = 'Вся страна',
+    North = 'Север',
     Center = 'Центр',
+    South = 'Юг',
     // Города Центрального региона
     TelAviv = 'Тель-Авив',
     RishonLeZion = 'Ришон ле-Цион',
@@ -31,7 +33,6 @@ export enum City {
     Gedera = 'Гедера',
     HerzliyaPituach = 'Херцлия-Питуах',
 
-    North = 'Север',
     // Города Северного региона
     Haifa = 'Хайфа',
     Nazareth = 'Назарет',
@@ -53,7 +54,6 @@ export enum City {
     Nahalal = 'Нахалал',
     TiratCarmel = 'Тират-Кармель',
 
-    South = 'Юг',
     // Города Южного региона
     Beersheba = 'Беэр-Шева',
     Ashdod = 'Ашдод',

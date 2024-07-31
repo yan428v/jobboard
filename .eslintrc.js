@@ -51,7 +51,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['off'],
-        'max-len': ['warn', 120, { ignoreComments: true }],
+        'max-len': ['warn', 130, { ignoreComments: true }],
         'space-infix-ops': 'off',
         'arrow-body-style': 'off',
         'react/require-default-props': 'off',

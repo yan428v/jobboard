@@ -36,7 +36,7 @@ const Post = ({ post }:PostProps) => {
                 <div className={styles.postContentWrapper}>
                     <div className={styles.postTileWrapper}>
                         <h2 className={styles.postTitle}>{post.jobTitle}</h2>
-                        <p className={styles.postCity}>{post.city}</p>
+                        <p className={styles.postCity}>{(post.city)}</p>
                     </div>
                     <p className={styles.postDescription}>{post.jobDescription}</p>
                     <div className={styles.postContacts}>

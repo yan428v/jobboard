@@ -3,44 +3,30 @@
 import React, { ChangeEvent, useState } from 'react';
 import { createJobPost } from '@/lib/actionsJobPosts';
 import {
-    City, JobCategory, JobPostCreateData,
+    Cities, JobCategory, JobPostCreateData,
 } from '@/lib/types/types';
+import Loader from '@/components/shared/Loader/ui/Loader';
 import styles from './CreatePost.module.scss';
-import Loader from '../../shared/Loader/ui/Loader';
+
+const initialFormData: JobPostCreateData = {
+    name: '',
+    phoneNumber: '',
+    whatsappNumber: '',
+    telegramNumber: '',
+    city: Cities.ChooseCity,
+    jobTitle: '',
+    jobDescription: '',
+    jobCategory: JobCategory.AllCategories,
+    isVip: false,
+};
 
 function CreatePost() {
-    const [formData, setFormData] = useState<JobPostCreateData>({
-        name: '',
-        phoneNumber: '',
-        whatsappNumber: '',
-        telegramNumber: '',
-        city: City.ChooseCity,
-        jobTitle: '',
-        jobDescription: '',
-        jobCategory: JobCategory.AllCategories,
-        isVip: false,
-    });
-
+    const [formData, setFormData] = useState(initialFormData);
     const [isLoading, setIsLoading] = useState(false);
 
-    // const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    //     const {
-    //         name, value, type, checked,
-    //     } = e.target;
-    //     setFormData((prev) => ({
-    //         ...prev,
-    //         [name]: type === 'checkbox' ? checked : value,
-    //     }));
-    // };
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-        const value = target.type === 'checkbox'
-            ? (target as HTMLInputElement).checked : target.value;
-        setFormData((prev) => ({
-            ...prev,
-            [target.name]: value,
-        }));
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = async () => {
@@ -49,24 +35,10 @@ function CreatePost() {
 
             await createJobPost(formData);
 
-            console.log(formData);
-
-            setFormData({
-                name: '',
-                phoneNumber: '',
-                whatsappNumber: '',
-                telegramNumber: '',
-                city: City.ChooseCity,
-                jobTitle: '',
-                jobDescription: '',
-                jobCategory: JobCategory.AllCategories,
-                isVip: false,
-            });
-
+            setFormData(initialFormData);
             console.log('post was created');
         } catch (error) {
             console.error('Failed to add job post:', error);
-            // alert('Failed to post job.');
         } finally {
             setIsLoading(false);
         }
@@ -110,14 +82,21 @@ function CreatePost() {
                 placeholder="Telegram Number"
                 className={styles.inputField}
             />
-            <input
-                type="text"
+            <select
                 name="city"
-                value={formData.city}
-                onChange={handleChange}
-                placeholder="City"
+                id="city"
                 className={styles.inputField}
-            />
+                onChange={handleChange}
+                value={formData.city}
+            >
+                {Object.keys(Cities).map((key: string) => (
+                    <option
+                        key={key}
+                    >
+                        {Cities[key as keyof typeof Cities]}
+                    </option>
+                ))}
+            </select>
             <input
                 type="text"
                 name="jobTitle"
@@ -141,15 +120,6 @@ function CreatePost() {
                 placeholder="Job Category"
                 className={styles.inputField}
             />
-            <div className={styles.checkboxContainer}>
-                <input
-                    type="checkbox"
-                    name="isVip"
-                    checked={formData.isVip}
-                    onChange={handleChange}
-                />
-                <span className={styles.checkboxLabel}>Is VIP</span>
-            </div>
             <button
                 type="submit"
                 disabled={isLoading}

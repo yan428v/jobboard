@@ -2,12 +2,11 @@ import { getAllPosts } from '@/lib/actionsJobPosts';
 import Filter from '../components/features/FIlter/Filter';
 import PostsList from '../components/widgets/PostsList/PostsList';
 import './globals.scss';
+import 'animate.css/animate.css';
 
 export default async function Home() {
     const jobPosts = await getAllPosts();
-    // const tenPosts = jobPosts.slice(0, 10);
     const reversPosts = jobPosts.reverse();
-    // console.log(tenPosts);
 
     return (
         <div className="wrapperStyles">

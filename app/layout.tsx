@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.scss';
 import Header from '../components/widgets/Header/Header';
 import StoreProvider from './StoreProvider';
+import 'animate.css';
 
 export const metadata: Metadata = {
     title: 'Поиск работы в Израиле - Доска вакансий',
