@@ -1,11 +1,12 @@
 'use client';
 
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { createJobPost } from '@/lib/actionsJobPosts';
 import {
     Cities, JobCategory, JobPostCreateData,
 } from '@/lib/types/types';
 import Loader from '@/components/shared/Loader/ui/Loader';
+import Button from '@/components/shared/Button/Button';
 import styles from './CreatePost.module.scss';
 
 const initialFormData: JobPostCreateData = {
@@ -16,26 +17,46 @@ const initialFormData: JobPostCreateData = {
     city: Cities.ChooseCity,
     jobTitle: '',
     jobDescription: '',
-    jobCategory: JobCategory.AllCategories,
+    jobCategory: [],
     isVip: false,
 };
 
 function CreatePost() {
+    const categoryArray = Object.values(JobCategory);
     const [formData, setFormData] = useState(initialFormData);
     const [isLoading, setIsLoading] = useState(false);
+    const [categories, setCategories] = useState<string[]>([]);
+
+    const handleAddCategory = (category: string) => {
+        let updatedCategories;
+        if (categories.includes(category)) {
+            updatedCategories = categories.filter((cat) => cat !== category);
+        } else {
+            updatedCategories = [...categories, category];
+        }
+        setCategories(updatedCategories);
+    };
+
+    useEffect(() => {
+        setFormData((prev) => ({
+            ...prev,
+            jobCategory: categories,
+        }));
+    }, [categories]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+        console.log(formData);
     };
-
     const handleSubmit = async () => {
         try {
+            console.log(formData);
             setIsLoading(true);
-
             await createJobPost(formData);
-
             setFormData(initialFormData);
+            setCategories([]);
+
             console.log('post was created');
         } catch (error) {
             console.error('Failed to add job post:', error);
@@ -89,13 +110,14 @@ function CreatePost() {
                 onChange={handleChange}
                 value={formData.city}
             >
-                {Object.keys(Cities).map((key: string) => (
-                    <option
-                        key={key}
-                    >
-                        {Cities[key as keyof typeof Cities]}
-                    </option>
-                ))}
+                {Object.keys(Cities)
+                    .map((key: string) => (
+                        <option
+                            key={key}
+                        >
+                            {Cities[key as keyof typeof Cities]}
+                        </option>
+                    ))}
             </select>
             <input
                 type="text"
@@ -112,20 +134,24 @@ function CreatePost() {
                 placeholder="Job Description"
                 className={styles.textareaField}
             />
-            <input
-                type="text"
-                name="jobCategory"
-                value={formData.jobCategory}
-                onChange={handleChange}
-                placeholder="Job Category"
-                className={styles.inputField}
-            />
+            <div className={styles.categoryFilters}>
+                {categoryArray.map((category) => (
+                    <Button
+                        key={category}
+                        isSelected={categories.includes(category)}
+                        onClick={() => handleAddCategory(category)}
+                    >
+                        {category}
+                    </Button>
+                ))}
+            </div>
+
             <button
                 type="submit"
                 disabled={isLoading}
                 className={styles.submitButton}
             >
-                {isLoading ? <Loader />:'Post Job' }
+                {isLoading ? <Loader /> : 'Post Job'}
             </button>
         </form>
     );

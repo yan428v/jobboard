@@ -105,7 +105,7 @@ export interface JobPostData {
     city: string;
     jobTitle: string;
     jobDescription: string;
-    jobCategory: string;
+    jobCategory: string[];
     isVip: boolean;
     creationDate: Date
 }
@@ -117,6 +117,6 @@ export interface JobPostCreateData {
     city: string;
     jobTitle: string;
     jobDescription: string;
-    jobCategory: string;
+    jobCategory: string[];
     isVip: boolean;
 }

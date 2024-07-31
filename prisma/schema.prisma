@@ -16,7 +16,7 @@ model job_post {
   city           String
   jobTitle       String
   jobDescription String
-  jobCategory    String
+  jobCategory    String[]
   isVip          Boolean  @default(false)
   creationDate   DateTime @default(now())
 }
